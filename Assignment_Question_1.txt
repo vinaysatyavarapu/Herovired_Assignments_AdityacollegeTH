@@ -1,0 +1,52 @@
+QUESTION-1:
+-----------
+1.
+
+>show user							
+
+>create user Employee identified by system;	
+
+>alter user Employee identified by Employee1234;	
+
+>grant create session to Employee;			
+
+>grant create table to Employee;			
+
+>grant unlimited tablespace to Employee;		
+
+>connect Employee/Employee1234;	
+
+		
+
+2. Query for creating a Employee_Details table with EMP_ID, EMP_NAME, JOB_NAME, MANAGER_ID, HIRE_DATE, SALARY, DEPT_ID
+
+>create table EmployeeDetails(Emp_Id number(10), Emp_Name varchar2(20), Job_Name varchar2(20), Manager_Id number(15), Hire_date date, salary number(10), Dept_id number(4));
+
+3.Query for inserting 10 records of data into table Employee_Details
+
+>insert into EmployeeDetails values(111, 'Varun', 'Full stack Manager', 98764, '11-11-1983', 800000, 1001);
+>insert into EmployeeDetails values(222, 'Sandeep', 'Full stack lead', 98763, '26-07-2011', 200000, 1002);
+>insert into EmployeeDetails values(333, 'Krisnhavamsi', 'Full stack Developer', 98763, '16-01-2001', 300000, 1003);
+>insert into EmployeeDetails values(444, 'Kavya', 'Manager', 98762, '21-04-2021', 400000, 1009);
+>insert into EmployeeDetails values(555, 'Gowtham', ' Full stac Designer', 98762, '12-09-2012', 450000, 1004);
+>insert into EmployeeDetails values(666, 'Sai', 'Gaming Developer', 98761, '15-09-2003', 300000, 1005);
+>insert into EmployeeDetails values(777, 'Manoj', 'Gamining Designer', 98762, '17-05-2001', 450000, 1006);
+>insert into EmployeeDetails values(888, 'Venkey', 'Devops', 98653, '15-09-2001', 560000, 1007);
+>insert into EmployeeDetails values(999, 'Rajesh', 'Mechanie learning', 98453, '16-12-2002', 300000, 1008);
+>insert into EmployeeDetails values(1000, 'Raj', 'cloud computing', 98645, '13-08-2022', 650000, 1010);
+
+
+4. Query for selecting the salaries of all the employees along with EMP_ID, EMP_NAME from the “EmployeeDetails” table.
+
+>select Emp_Id, Emp_Name, Salary from EmployeeDetails;
+
+5.Query for selecting the unique designations of the employees from the table
+
+>select distinct Job_Name FROM EmployeeDetails;
+
+6. Query for updating the salary where the employee name is "Raj"
+
+>update EmployeeDetails set salary = 650000 where Emp_Name = 'Raj';
+
+
+
